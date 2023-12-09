@@ -16,8 +16,8 @@
 </head>
 
 <body>
+  <!-- !!!!!!!!!!!!!!!!!!!!!!  ХЕДЕР !!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <header class="page-hader">
-    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Навигация !!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <div class="container page-hader-conteiner">
       <nav class="navig">
         <a href="./index.html" class="logo">Web<span>Studio</span></a>
@@ -27,9 +27,13 @@
           <li><a class="link" href="">Contacts</a></li>
         </ul>
       </nav>
-      <!--!!!!!!!!!!!!!!!!!!!!!!!!!! Адрес !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+      <button class="mobil-menu-open-btn" type="button">
+        <svg class="mobil-menu-open-btn-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-mobil-menu"></use>
+        </svg>
+      </button>
       <address class="info">
-        <ul class="mail-tel">
+        <ul class="adress-mail-tel">
           <li><a class="mail-tel" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
           <li><a class="mail-tel" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
         </ul>
@@ -37,15 +41,15 @@
     </div>
   </header>
   <main>
-    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!! Секция 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!   HERO   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <section class="hero section hero-conteiner">
       <div class="container">
         <h1 class="hero-title">Effective Solutions for Your Business</h1>
         <button class="start" type="button">Order Service</button>
       </div>
     </section>
-    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!! Секция 2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-    <section class="section">
+    <!--!!!!!!!!!!!!!!!!!!!!!!!!!!! Секция 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    <section class="section-all">
       <div class="container">
         <h2 class="visually-hidden">Advantages</h2>
         <ul class="two-section-list">
@@ -101,7 +105,7 @@
       </div>
     </section>
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!! Секция 3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-    <section class="our-team section">
+    <!-- <section class="our-team section-all">
       <div class="container">
         <h2 class="title">Our Team</h2>
         <ul class="our-team-list">
@@ -251,9 +255,9 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
     <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!! Секция 4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-    <section class="section">
+    <!-- <section class="section-all">
       <div class="container">
         <h2 class="title">Our Portfolio</h2>
         <ul class="portfolio-conteiner">
@@ -337,10 +341,10 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
   </main>
   <!--!!!!!!!!!!!!!!!! Футер !!!!!!!!!!!!!!!!!!!!!-->
-  <footer class="end">
+  <!-- <footer class="end">
     <div class="footer-icon container">
       <div class="logo-div">
         <a href="./index.html" class="logo logo-futer">Web <span class="end-logo">Studio</span></a>
@@ -397,9 +401,9 @@
         </form>
       </div>
     </div>
-  </footer>
+  </footer> -->
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!  МОДАЛЬНОЕ ОКНО  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-  <div class="backdrop in-open">
+  <!-- <div class="backdrop in-open">
     <div class="modal">
       <button class="modal-close-btn" type="button">
         <svg class="modal-close-btn-icon" width="8" height="8">
@@ -440,11 +444,11 @@
           <label class="modal-label" for="user-comment">Comment</label>
           <textarea class="modal-textaria" name="user-comment" id="user-comment" placeholder="Text input"
             required></textarea>
-        </div>
+        </div> -->
 
-        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!  ЧЕКБОКС !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!  ЧЕКБОКС !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
-        <div class="modal-form-check">
+  <!-- <div class="modal-form-check">
           <input class="modal-checkbox visually-hidden" type="checkbox" id="user-privacy" name="user-privacy"
             value="true" required>
           <label class="modal-check-label" for="user-privacy">
@@ -457,6 +461,66 @@
         </div>
         <button class="modal-form-btn" type="submit">Send</button>
       </form>
+    </div>
+  </div> -->
+
+  <!--   !!!!!!!!!!!!!!!!!!!!!  МОБИЛЬНОЕ МЕНЮ  !!!!!!!!!!!!!!!!!!!!! -->
+  <div class="mobil-menu-wrapper container">
+    <button class="mobil-close-btn" type="button">
+      <svg class="mobil-close-btn-icon" width="8" height="8">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <nav class="mobil-menu-nav">
+      <ul class="mobil-menu-list">
+        <li class="mobil-menu-item">
+          <a class="mobil-menu-link color" href="">Studio</a>
+        </li>
+        <li class="mobil-menu-item">
+          <a class="mobil-menu-link" href="">Portfolio</a>
+        </li>
+        <li class="mobil-menu-item">
+          <a class="mobil-menu-link" href="">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    <address class="mobil-menu-adress">
+      <ul class="mobil-menu-contakt">
+        <li><a class="mobil-tel mobil-tel-color" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+        <li><a class="mobil-tel" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+      </ul>
+    </address>
+    <div class="mobil-menu-social-media">
+      <ul class="mobil-social-media">
+        <li class="social-media-list">
+          <a href="" class="social-media-link">
+            <svg class="social-media-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-list">
+          <a href="" class="social-media-link">
+            <svg class="social-media-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-list">
+          <a href="" class="social-media-link">
+            <svg class="social-media-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media-list">
+          <a href="" class="social-media-link">
+            <svg class="social-media-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 

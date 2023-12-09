@@ -4,7 +4,6 @@ body {
   background: #fff;
   margin: 0;
 }
-
 h1,
 h2,
 h3,
@@ -15,52 +14,55 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
-
 ul {
   list-style-type: none;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
 }
-
 a {
   text-decoration: none;
 }
-
 img {
   display: block;
 }
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!! CONTEINER  !!!!!!!!!!!!!!!!!!!!!!!!!! */
 .container {
-  max-width: 1158px;
+  max-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
-
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+/* !!!!!!!!!!!!!!!!!!!!!!  MOBIL HEDER  !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.link-list {
+  display: none;
 }
-
-/* !!!!!!!!!!!!!!!!!!  ХЕДЕР  !!!!!!!!!!!!!!!!!!!!!!!! */
-
+.info {
+  display: none;
+}
+.page-hader-conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .page-hader {
   border-bottom: 1px solid #e7e9fc;
   background: #fff;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-.page-hader-conteiner {
-  display: flex;
-  justify-content: space-between;
-}
-
-.navig {
-  display: flex;
-  align-items: center;
 }
 
 .logo {
@@ -74,7 +76,6 @@ img {
   text-decoration: none;
   margin-right: 76px;
 }
-
 span {
   color: #2e2f42;
   font-family: Raleway;
@@ -85,99 +86,136 @@ span {
   text-transform: uppercase;
   text-decoration: none;
 }
-
-.link-list {
-  display: flex;
-  gap: 40px;
-}
-
-.link {
-  color: #2e2f42;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  display: flex;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link:hover,
-.link:focus {
-  color: #404bbf;
-}
-
-.current {
-  position: relative;
-  color: #404bbf;
-}
-
-.navig .current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #404bbf;
-}
-
-.info {
-  font-style: normal;
+.mobil-social-media {
   display: flex;
 }
 
-.mail-tel {
-  color: #434455;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.mail-tel :hover,
-.mail-tel :focus {
-  color: #404bbf;
-}
+@media screen and (max-width: 767px) {
+  .mobil-menu-open-btn {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    line-height: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .mobil-close-btn {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+    fill: #2e2f42;
+    cursor: pointer;
+  }
+  .mobil-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mobil-menu-wrapper.is-open {
+    transform: translateX(0%);
+  }
+  .mobil-menu-nav {
+    display: block;
+    margin-top: 72px;
+  }
+  .mobil-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 168px;
+  }
 
-/* !!!!!!!!!!!!!!    СЕКЦИЯ 1  !!!!!!!!!!!!!!!!!!! */
+  .mobil-menu-link {
+    color: #2e2f42;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11; /* 111.111% */
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+  }
+  .color {
+    color: #404bbf;
+  }
+  .mobil-tel {
+    color: #434455;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+  .mobil-tel-color {
+    color: #4d5ae5;
+  }
+  .mobil-menu-contakt {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 48px;
+  }
+  .mobil-social-media {
+    display: flex;
+    gap: 40px;
+  }
+}
+/* !!!!!!!!!!!!!!!!!!!!!  MOBIL HEDER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
+/*  !!!!!!!!!!!!!!!!!!!!  МОБИЛ СЕКЦИЯ HERO  !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
 .hero {
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
-  max-width: 1440px;
+    url(../images/Dark-bg-mob.jpg);
+  max-width: 320px;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
-.hero-conteiner {
-  padding-top: 188px;
-  padding-bottom: 188px;
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg-mob@2x.jpg);
+  }
 }
-
 .hero-title {
   color: #fff;
   text-align: center;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
-  max-width: 496px;
-  height: 120px;
-  margin-bottom: 48px;
+  text-transform: capitalize;
+  max-width: 200px;
+  margin-bottom: 72px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -199,37 +237,349 @@ span {
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.start:hover,
-.start:focus {
-  background-color: #404bbf;
-  color: #fff;
+/*  !!!!!!!!!!!!!!!!!!!!  МОБИЛ СЕКЦИЯ HERO  !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/*  !!!!!!!!!!!!!!!!!!!!  МОБИЛ СЕКЦИЯ 1  !!!!!!!!!!!!!!!!!!!!!!!!! */
+.two-section-icon {
+  display: none;
+}
+.section-all {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.advantages-titl {
+  color: #2e2f42;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.advantages-text {
+  color: #434455;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.two-section-item {
+  margin-bottom: 72px;
+}
+.two-section-item:last-child {
+  margin-bottom: 0;
 }
 
-/* !!!!!!!!!!!!!!!!    СЕКЦИЯ 2  !!!!!!!!!!!!!!!!!! */
+/*  !!!!!!!!!!!!!!!!!!!!  МОБИЛ СЕКЦИЯ 1  !!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!! TABLET HEDER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .mobil-menu-open-btn {
+    display: none;
+  }
+  .mobil-menu-wrapper {
+    display: none;
+  }
+  .navig {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    margin-right: 120px;
+  }
+  .link-list {
+    display: flex;
+    gap: 40px;
+  }
+  .link {
+    color: #2e2f42;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .current {
+    position: relative;
+    color: #404bbf;
+  }
+  .navig .current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
+  }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  .info {
+    font-style: normal;
+    display: flex;
+  }
+  .adress-mail-tel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .mail-tel {
+    color: #434455;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* !!!!!!!!!!!!!!!!!! TABLET HEDER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+  /*  !!!!!!!!!!!!!!!!!!!!  TABLET СЕКЦИЯ HERO  !!!!!!!!!!!!!!!!!!!!!! */
+  .section {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+  .hero {
+    background-color: #2e2f42;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg-tablet.jpg);
+    max-width: 768px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/Dark-bg-tablet@2x.jpg);
+    }
+  }
+  .hero-title {
+    color: #fff;
+    text-align: center;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    max-width: 496px;
+    margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .start:hover,
+  .start:focus {
+    background-color: #404bbf;
+    color: #fff;
+  }
+  /*  !!!!!!!!!!!!!!!!!!!!  TABLET СЕКЦИЯ HERO  !!!!!!!!!!!!!!!!!!!! */
+  /*  !!!!!!!!!!!!!!!!!!!!  TABLET СЕКЦИЯ 1  !!!!!!!!!!!!!!!!!!!! */
+  .two-section-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+  }
+  .two-section-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .advantages-titl {
+    font-size: 36px;
+    text-align: start;
+  }
+  .two-section-item {
+    margin-bottom: 72px;
+  }
+  .two-section-item:last-child {
+    margin-bottom: 0;
+  }
+
+  /*  !!!!!!!!!!!!!!!!!!!!  TABLET СЕКЦИЯ 1  !!!!!!!!!!!!!!!!!!!! */
 }
 
-.two-section-list {
+/* !!!!!!!!!!!!!!!!!!! DECSTOP HEDER  !!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+  .logo {
+    margin-right: 76px;
+  }
+  .link:hover,
+  .link:focus {
+    color: #404bbf;
+  }
+  .adress-mail-tel {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .mail-tel {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+  .mail-tel :hover,
+  .mail-tel :focus {
+    color: #404bbf;
+  }
+  /* !!!!!!!!!!!!!!!!!!! DECSTOP HEDER  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+  /*  !!!!!!!!!!!!!!!!!!!!  DESCTOP СЕКЦИЯ HERO  !!!!!!!!!!!!!!!!!!!! */
+  .section {
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+  .hero {
+    background-color: #2e2f42;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-desktop.jpg);
+    max-width: 1440px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-desktop@2x.jpg);
+    }
+  }
+  .hero-title {
+    max-width: 496px;
+    margin-bottom: 48px;
+  }
+  /*  !!!!!!!!!!!!!!!!!!!!  DESCTOP СЕКЦИЯ 1  !!!!!!!!!!!!!!!!!!!! */
+  .section-all {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  /* .two-section-list {
   display: flex;
   gap: 24px;
+} */
+
+  .two-section-item {
+    width: calc((100% - 72px) / 4);
+    margin-bottom: 0;
+  }
+
+  .two-section-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    background: #f4f4fd;
+    height: 112px;
+    margin-bottom: 8px;
+  }
+  .advantages-titl {
+    color: #2e2f42;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+  .advantages-text {
+    color: #434455;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
 }
 
-.two-section-item {
+/* .container {
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* .section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+} */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!    СЕКЦИЯ 1  !!!!!!!!!!!!!!!!!!!!!! */
+
+/* .hero {
+  background-color: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/Dark-bg-mob.jpg);
+  max-width: 1440px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+} */
+
+/* .hero-conteiner {
+  padding-top: 188px;
+  padding-bottom: 188px;
+} */
+
+/* .hero-title {
+  color: #fff;
+  text-align: center;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  max-width: 496px;
+  height: 120px;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* !!!!!!!!!!!!!!!!    СЕКЦИЯ 1  !!!!!!!!!!!!!!!!!! */
+
+/* .two-section-list {
+  display: flex;
+  gap: 24px;
+} */
+
+/* .two-section-item {
   width: calc((100% - 72px) / 4);
-}
+} */
 
-.two-section-icon {
+/* .two-section-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,9 +588,9 @@ span {
   background: #f4f4fd;
   height: 112px;
   margin-bottom: 8px;
-}
+} */
 
-.title {
+/* .title {
   color: #2e2f42;
   text-align: center;
   font-size: 36px;
@@ -249,23 +599,23 @@ span {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   margin-bottom: 72px;
-}
+} */
 
-.advantages-titl {
+/* .advantages-titl {
   color: #2e2f42;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
-}
+} */
 
-.advantages-text {
+/* .advantages-text {
   color: #434455;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-}
+} */
 
 /* !!!!!!!!!!!!!!!!!   СЕКЦИЯ 3   !!!!!!!!!!!!!!!!! */
 
@@ -720,10 +1070,7 @@ span {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* .modal-checkbox:checked {
-  width: 30px;
-  height: 30px;
-} */
+
 .modal-checkbox:checked + .modal-check-label > .castom-checkbox {
   background-color: #404bbf;
   border: none;
