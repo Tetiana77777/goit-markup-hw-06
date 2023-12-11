@@ -240,6 +240,11 @@ span {
 /*  !!!!!!!!!!!!!!!!!!!!  МОБИЛ СЕКЦИЯ HERO  !!!!!!!!!!!!!!!!!!!!!!!!! */
 
 /*  !!!!!!!!!!!!!!!!!!!!  МОБИЛ СЕКЦИЯ 1  !!!!!!!!!!!!!!!!!!!!!!!!! */
+.two-section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
 .two-section-icon {
   display: none;
 }
@@ -264,14 +269,164 @@ span {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-.two-section-item {
-  margin-bottom: 72px;
-}
 .two-section-item:last-child {
   margin-bottom: 0;
 }
 
 /*  !!!!!!!!!!!!!!!!!!!!  МОБИЛ СЕКЦИЯ 1  !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/*  !!!!!!!!!!!!!!!!!!!!  МОБИЛ СЕКЦИЯ 2  !!!!!!!!!!!!!!!!!!!!!!!!! */
+.container-our-team {
+  width: 296px;
+}
+.our-team {
+  background-color: #f4f4fd;
+}
+.title {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11; /* 111.111% */
+  letter-spacing: 0.02em;
+}
+
+.title {
+  margin-bottom: 72px;
+}
+
+.our-team-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 72px;
+}
+
+.kard {
+  background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.kard:hover {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.kard-item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.card-titl {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  color: #434455;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.social-media-link {
+  background-color: #4d5ae5;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-media-icon {
+  fill: #f4f4fd;
+}
+
+/*  !!!!!!!!!!!!!!!!!!!!  МОБИЛ СЕКЦИЯ 2  !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/*  !!!!!!!!!!!!!!!!!!!!  МОБИЛ СЕКЦИЯ 3  !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.portfolio-conteiner {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.card-foto {
+  width: 100%;
+}
+
+.portfolio-item {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+.portfolio-card:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-block-text {
+  background-color: #4d5ae5;
+  color: #f4f4fd;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 40px 32px;
+}
+
+.portfolio-block {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-block:hover .overlay {
+  transform: translate(0);
+}
+
+.portfolio-title {
+  color: #2e2f42;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.portfolio-text {
+  color: #434455;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+/*  !!!!!!!!!!!!!!!!!!!!  МОБИЛ СЕКЦИЯ 3  !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
 /* !!!!!!!!!!!!!!!!!! TABLET HEDER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 @media screen and (min-width: 768px) {
   .container {
@@ -406,14 +561,46 @@ span {
     font-size: 36px;
     text-align: start;
   }
-  .two-section-item {
+  /* .two-section-item {
     margin-bottom: 72px;
-  }
+  } */
   .two-section-item:last-child {
     margin-bottom: 0;
   }
 
   /*  !!!!!!!!!!!!!!!!!!!!  TABLET СЕКЦИЯ 1  !!!!!!!!!!!!!!!!!!!! */
+  /*  !!!!!!!!!!!!!!!!!!!!  TABLET СЕКЦИЯ 2  !!!!!!!!!!!!!!!!!!!! */
+  .container-our-team {
+    width: 584px;
+  }
+  .our-team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 64px;
+  }
+
+  .kard {
+    width: calc((100% - 24px) / 2);
+  }
+  /*  !!!!!!!!!!!!!!!!!!!!  TABLET СЕКЦИЯ 2  !!!!!!!!!!!!!!!!!!!! */
+  /*  !!!!!!!!!!!!!!!!!!!!  TABLET СЕКЦИЯ 3  !!!!!!!!!!!!!!!!!!!! */
+  .portfolio-conteiner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  .card-foto {
+    max-width: 356px;
+  }
+  .portfolio-card {
+    width: calc((100% - 24px) / 2);
+    background: #fff;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /*  !!!!!!!!!!!!!!!!!!!!  TABLET СЕКЦИЯ 3  !!!!!!!!!!!!!!!!!!!! */
 }
 
 /* !!!!!!!!!!!!!!!!!!! DECSTOP HEDER  !!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -483,16 +670,10 @@ span {
     padding-top: 120px;
     padding-bottom: 120px;
   }
-  /* .two-section-list {
-  display: flex;
-  gap: 24px;
-} */
-
   .two-section-item {
     width: calc((100% - 72px) / 4);
     margin-bottom: 0;
   }
-
   .two-section-icon {
     display: flex;
     align-items: center;
@@ -518,22 +699,26 @@ span {
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
+  /*  !!!!!!!!!!!!!!!!!!!!  DESCTOP СЕКЦИЯ 2  !!!!!!!!!!!!!!!!!!!! */
+  .our-team-list {
+    flex-wrap: nowrap;
+  }
+  .container-our-team {
+    width: 1158px;
+  }
+  .social-media-link:hover,
+  .social-media-link:focus {
+    background-color: #404bbf;
+  }
+  /*  !!!!!!!!!!!!!!!!!!!!  DESCTOP СЕКЦИЯ 3 !!!!!!!!!!!!!!!!!!!! */
+  .portfolio-conteiner {
+    row-gap: 48px;
+  }
+  .portfolio-card {
+    width: calc((100% - 48px) / 3);
+  }
 }
-
-/* .container {
-  max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
-/* .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-} */
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!    СЕКЦИЯ 1  !!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!    СЕКЦИЯ HERO  !!!!!!!!!!!!!!!!!!!!!! */
 
 /* .hero {
   background-color: #2e2f42;
@@ -617,40 +802,40 @@ span {
   letter-spacing: 0.02em;
 } */
 
-/* !!!!!!!!!!!!!!!!!   СЕКЦИЯ 3   !!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!   СЕКЦИЯ 2   !!!!!!!!!!!!!!!!! */
 
-.our-team {
+/* .our-team {
   background-color: #f4f4fd;
-}
+} */
 
-.title {
+/* .title {
   margin-bottom: 72px;
-}
+} */
 
-.our-team-list {
+/* .our-team-list {
   display: flex;
   gap: 24px;
-}
+} */
 
-.kard {
+/* .kard {
   background-color: #ffffff;
   width: calc((100% - 72px) / 4);
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-}
+} */
 
-.kard:hover {
+/* .kard:hover {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
-.kard-item {
+/* .kard-item {
   padding-top: 32px;
   padding-bottom: 32px;
-}
+} */
 
-.card-titl {
+/* .card-titl {
   color: #2e2f42;
   text-align: center;
   font-size: 20px;
@@ -658,25 +843,25 @@ span {
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
-}
+} */
 
-.card-text {
+/* .card-text {
   color: #434455;
   text-align: center;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-}
+} */
 
-.social-media {
+/* .social-media {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 24px;
   margin-top: 8px;
-}
+} */
 
-.social-media-link {
+/* .social-media-link {
   background-color: #4d5ae5;
   display: flex;
   width: 40px;
@@ -685,20 +870,15 @@ span {
   align-items: center;
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
-.social-media-link:hover,
-.social-media-link:focus {
-  background-color: #404bbf;
-}
-
-.social-media-icon {
+/* .social-media-icon {
   fill: #f4f4fd;
-}
+} */
 
-/* !!!!!!!!!!!!!!!!!!!   СЕКЦИЯ 4  !!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!   СЕКЦИЯ 3  !!!!!!!!!!!!!!!!!! */
 
-.portfolio-conteiner {
+/* .portfolio-conteiner {
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
@@ -764,7 +944,7 @@ span {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-}
+} */
 
 /* !!!!!!!!!!!!!!!!!!  ФУТЕР  !!!!!!!!!!!!!!!!!! */
 
